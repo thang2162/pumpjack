@@ -12,6 +12,10 @@ export default withRouter((props) => {
     setValues({...values, ['showMenu']: !values.showMenu});
   }
 
+  const closeMenu = () => {
+    setValues({...values, ['showMenu']: false});
+  }
+
   const navTo = (page) => {
   //alert(page)
     props.history.push(page);
@@ -32,7 +36,7 @@ export default withRouter((props) => {
     <OutsideClickHandler
      onOutsideClick={() => {
       // alert('You clicked outside of this component!!!');
-      setValues({...values, ['showMenu']: false});
+      closeMenu();
      }}
    >
     <nav className="navbar" role="navigation" aria-label="main navigation">
@@ -52,10 +56,10 @@ export default withRouter((props) => {
 
   <div id="navbarBasicExample" className={`navbar-menu ${values.showMenu ? 'is-active' : ''}`}>
     <div className="navbar-start">
-      <a className="navbar-item" onClick={() => navTo('/')}>
+      <a className="navbar-item" onClick={() => {closeMenu(); navTo('/');}}>
         Home
       </a>
-      <a className="navbar-item" onClick={() => navTo('/products')}>
+      <a className="navbar-item" onClick={() => {closeMenu(); navTo('/products');}}>
         Products
       </a>
 
