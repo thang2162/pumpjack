@@ -6,7 +6,7 @@
 
 ## Server Instructions
 1. cd into pumpjack
-2. Run 'npm install' or 'yarn install' to install dependencies 
+2. Run 'npm install' or 'yarn install' to install dependencies
 3. Run Command from Shell 'node db createUserTable' to create User Table
 4. Run Command from Shell 'node db createProductTable' to create Product Table
 5. Run Command from Shell 'node db seedUserTable' to seed User Table
@@ -17,3 +17,20 @@
 1. cd into pumpjack-spa
 2. Run 'npm install' or 'yarn install' to install dependencies
 3. Run 'npm start' or 'yarn start' to start app.
+
+## Server Authentication
+For restricted endpoints you'll need to request an authorization token (jwt) via
+a POST request to 'localhost:8080/auth' with a JSON object containing an email
+and password for example:
+
+{"email": "someone@email.com", "password": "some_password"}
+
+When Calling a restricted endpoint you must attach an 'Authorization' header to
+the request with the authorization token (jwt) from the '/auth' endpoint.
+
+## User Email / Passwords
+netguy87@gmail.com / 123456
+banterum@gmail.com / abcdef
+tonylee49@icloud.com / abc123
+koinverse@gmail.com / 121212
+thangso2@uwm.edu / ababab
