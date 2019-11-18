@@ -2,6 +2,8 @@ import React, { useContext } from "react";
 import { Link as RouterLink, withRouter } from 'react-router-dom';
 import { Context } from "../store";
 
+var hasLoaded = false;
+
 const User = (props) =>
 {
   const { id } = props.match.params;
@@ -13,6 +15,17 @@ const navTo = (page) => {
   props.history.push(page);
 
 };
+
+var list = [];
+
+if(store.products) {
+for(let product of store.products) {
+  if(product.owned.includes(parseInt(id))) {
+    list.push(product);
+  }
+}
+}
+
 
   return(
     <>
@@ -42,9 +55,8 @@ const navTo = (page) => {
 </tr>
   </tfoot>
   <tbody>
-  { store.products && store.products.length > 0 ?
-    store.products.map(product => (
-      product.owned.includes(parseInt(id)) ?
+  { list.length > 0 ?
+    list.map(product => (
     <tr>
       <th>{product.id}</th>
       <td>
@@ -55,7 +67,7 @@ const navTo = (page) => {
       <td><strong>{product.name}</strong></td>
       <td>{product.description}</td>
       <td>${product.price}</td>
-    </tr> : ''
+    </tr>
   )): <tr><th>No proudcts are owned by this user.</th></tr>}
 
   </tbody>
