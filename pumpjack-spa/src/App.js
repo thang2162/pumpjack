@@ -27,7 +27,7 @@ const loadData = () => {
 
   var userData, productData;
 
-  fetch('http://localhost:8080/getUsers', {
+  fetch('http://localhost:8080/public/getUsers', {
   method: 'GET', // or 'PUT'
 /*  body: JSON.stringify(payload), // data can be `string` or {object}!
     headers:{
@@ -40,7 +40,7 @@ const loadData = () => {
 
   userData = response;
 
-  fetch('http://localhost:8080/getProducts', {
+  fetch('http://localhost:8080/public/getProducts', {
   method: 'GET', // or 'PUT'
 /*  body: JSON.stringify(payload), // data can be `string` or {object}!
     headers:{
