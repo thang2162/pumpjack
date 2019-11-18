@@ -20,13 +20,13 @@
 
 ## Server Authentication
 For restricted endpoints you'll need to request an authorization token (jwt) via
-a POST request to 'localhost:8080/auth' with a JSON object containing an email
+a POST request to 'localhost:8080/public/auth' with a JSON object containing an email
 and password for example:
 
 {"email": "someone@email.com", "password": "some_password"}
 
 When Calling a restricted endpoint you must attach an 'Authorization' header to
-the request with the authorization token (jwt) from the '/auth' endpoint.
+the request with the authorization token (jwt) from the '/public/auth' endpoint.
 
 ## User Email / Passwords
 netguy87@gmail.com / 123456
@@ -40,7 +40,7 @@ koinverse@gmail.com / 121212
 thangso2@uwm.edu / ababab
 
 ## Image uploads
-You can add an image to a product by sending a PUT request to the '/addImage/#'
+You can add an image to a product by sending a PUT request to the '/private/addImage/#'
 where # is the id of the product you are adding the image to.
 
 Please make sure to assign the file object containing the image to the
