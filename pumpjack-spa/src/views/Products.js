@@ -51,7 +51,7 @@ const navTo = (page) => {
       <td><strong>{product.name}</strong></td>
       <td>{product.description}</td>
       <td>${product.price}</td>
-    </tr>)): <tr><th>No proudcts are owned by this user.</th></tr>}
+    </tr>)): <tr><th>No proudcts.</th></tr>}
 
   </tbody>
 </table>
