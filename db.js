@@ -55,7 +55,7 @@ console.log(JSON.stringify(res));
   res[0]],
     ['Tom', 'Tucker', 'banterum@gmail.com', res[1]],
     ['Jane', 'Doe', 'tonylee49@icloud.com', res[2]],
-    ['Tim', 'Cook', 'banterum@gmail.com', res[3]],
+    ['Tim', 'Cook', 'koinverse@gmail.com', res[3]],
     ['John', 'Snow', 'thangso2@uwm.edu', res[4]]
 ];
 
