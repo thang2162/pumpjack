@@ -2,7 +2,7 @@
 1. Clone Repo
 2. Install Postgres (Skip if Installed)
 3. Start Postgres (Skip if Started)
-4. Run Command from Shell 'createdb reflection_db' to create DB
+4. Run Command from Shell 'createdb pumpjack_db' to create DB
 
 ## Server Instructions
 1. cd into pumpjack
