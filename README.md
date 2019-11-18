@@ -30,7 +30,11 @@ the request with the authorization token (jwt) from the '/auth' endpoint.
 
 ## User Email / Passwords
 netguy87@gmail.com / 123456
+
 banterum@gmail.com / abcdef
+
 tonylee49@icloud.com / abc123
+
 koinverse@gmail.com / 121212
+
 thangso2@uwm.edu / ababab
