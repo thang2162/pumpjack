@@ -38,3 +38,13 @@ tonylee49@icloud.com / abc123
 koinverse@gmail.com / 121212
 
 thangso2@uwm.edu / ababab
+
+## Image uploads
+You can add an image to a product by sending a PUT request to the '/addImage/#'
+where # is the id of the product you are adding the image to.
+
+Please make sure to assign the file object containing the image to the
+'image' key as 'multipart/form-data'.
+
+## .env file
+Please make sure to update the environment variables before starting the server.
